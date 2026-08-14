@@ -1,0 +1,109 @@
+:root {
+    --base-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #ffc06e;
+    --secondary-color: #8d8DFF;
+    --color-1: #F9F6F3;
+--color-2: #F3F9F6;
+--color-3: #F6F3F9;
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+font-family: poppins, 'segoe UI';
+color: var(--text-color);
+
+}
+
+body {
+padding: 1em;
+background-color: var(--base-color);
+}
+
+h1, h2, h3 {
+font-family: poppins;
+
+}
+nav{ 
+    margin: 1em auto 3em auto;
+ width: min(1000px,100%)
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type:none;
+    gap:2em;
+}
+
+nav li:first-child{
+    margin-right:auto;
+    font-family: poppins;
+    font-weight: bold;
+}
+
+nav a{ 
+    text-decoration: none;
+    color: var(--text-color);
+}
+nav a:hover{
+    text-decoration: underline;
+}
+
+header, section{ 
+    margin: 1em auto;
+ width: min(75em,100%);
+ background-color: var(--color-1);
+ padding:  min(2em,15%);
+ border-radius: 1em;
+
+}
+.flex-container{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+header img{
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container{
+    flex:0 1 34em;
+}
+h1{
+    font-size: 2.5 ;
+}
+.text-container p{ 
+    margin: .75 0 1em 0;
+    font-size: 1.25rem;
+}
+@media(max-width: 988px){
+    header{
+        text-align: center;
+    }
+    header .text-container{
+        padding-top: 0;
+    }
+}
+@media(max-width: 640px){
+    nav li{
+        display:none;
+
+    }
+    nav li:first-child,
+    nav li:last-child{
+        display: block;
+    }
+}
